@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -e
+
+mkdir -p /opt
+cd /opt
+
+version="1.10.0"
+
+wget https://github.com/COMBINE-lab/salmon/releases/download/v"${version}"/salmon-"${version}"_linux_x86_64.tar.gz
+
+tar -xvzf salmon-"${version}"_linux_x86_64.tar.gz
+release_dir=salmon-"${version}"_linux_x86_64
+
+if [ ! -d "$release_dir" ]; then
+    release_dir=salmon-latest_linux_x86_64
+fi
+
+ln -s $PWD/$release_dir/bin/salmon /usr/bin/salmon
+ln -s $PWD/$release_dir/lib/* /usr/lib
+
+rm -rf salmon-"${version}"_linux_x86_64.tar.gz

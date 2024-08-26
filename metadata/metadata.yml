@@ -1,0 +1,15 @@
+metadata_version: 1
+name: 'Salmon: mapping-based quantification'
+description: |-
+  Salmon is a tool for wicked-fast transcript quantification from RNA-seq data. It requires a set of target transcripts (either from a reference or de-novo assembly) to quantify. This capsule performs quantification using raw fastq RNA reads and an index generated from an input reference.
+
+  https://salmon.readthedocs.io/en/latest/salmon.html.
+tags:
+- Salmon
+- RNA
+- Expression
+- Genomics
+- Bulk Sequencing
+authors:
+- name: Maxim Kuleshov
+- name: June Snedecor
